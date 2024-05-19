@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #element {
+    color: purple;
+    font-style: oblique;
+}
+
+    </style>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['passionate Web Developer', 'JAVA  Enthusiast', 'Front End Developer', 'Sofware Enthusiast'],
+            typeSpeed: 50,
+        });
+    
+        var typed = new Typed('#newelement', {
+            strings: ['Computer Science sophomore at DHA SUFFA UNIVERSITY skilled in HTML, CSS, JAVA, JavaScript, C and SQL. Leadership experience as Student Ambassador for ACM DSU, organizing community events. Eager to leverage technology for impactful solutions, adapt to new tech, and collaborate on innovative projects. Seeking growth in software development and web design, pushing boundaries in computer science.'],
+            typeSpeed: 10,
+        });
+    
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+    
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+    
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80, // Adjust this value based on navbar height
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    
+    </script>
+    
+</body>
+</html>
